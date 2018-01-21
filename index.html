@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>周末作业</title>
+</head>
+<script>
+//1、冒泡
+    function maopao(arr,type="asc") {
+        for (let i =0;i<arr.length;i++){
+            for (let j =0;j<arr.length-i-1;j++){
+                if (type=='desc'){
+                    if (arr[j]<arr[j+1]){
+                        let tmp=arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=tmp;
+                    }
+                }else if (type=='asc'){
+                    if (arr[j]>arr[j+1]){
+                        let tmp=arr[j];
+                        arr[j]=arr[j+1];
+                        arr[j+1]=tmp;
+                    }
+                }
+            }
+        }
+        console.log(arr);
+    }
+    let type ="desc";
+    maopao([33,23,41,3,5,1,65],type);
+//2、选择
+    function xuan(zrr,type ="asc") {
+        for (let i=0;i<zrr.length;i++){
+            for (let j=i+1;j<zrr.length;j++){
+                if (type=="desc"){
+                    if(zrr[i]>zrr[j]){
+                        let xuan = zrr[i];
+                        zrr[i] =zrr[j];
+                        zrr[j] = xuan;
+                    }
+                }else if(type =="asc"){
+                    if(zrr[i]<zrr[j]){
+                        let xuan = zrr[i];
+                        zrr[i] =zrr[j];
+                        zrr[j] = xuan;
+                    }
+                }
+
+            }
+        }
+        console.log(zrr);
+    }
+    xuan([33,5,67,89,3],type);
+///3、求一个二维数组中长度最长的数组
+    function chang(arr) {
+        for (let i = 0;i<arr.length;i++){
+            for (let j=0;j<arr[i].length;j++){
+                if(Max<arr[i].length){
+                    Max =arr[i].length;
+                    brr = arr[i];
+                }
+            }
+        }
+        console.log(brr);
+    }
+    let Max = 0;
+    let brr;
+    chang([[3,66,8,2],[23,6,89,5,34,54]]);
+//4、求一个二维数组的和
+    function sum(arr) {
+        for (let i = 0;i<arr.length;i++){
+            for (let j = 0;j<arr[i].length;j++){
+                he += arr[i][j];
+            }
+        }
+        console.log(he);
+    }
+    let he=0;
+    sum ( [[1,4,6,9],[3,7,8,2,5]])
+//5、求一个二维数组的最大值
+    function da(arr) {
+        for (let i =0;i<arr.length;i++){
+            for (let j = 0;j<arr[i].length;j++){
+                if(big < arr[i][j]){
+                    big = arr[i][j];
+                }
+            }
+        }
+        console.log(big);
+    }
+    let big = 0;
+    da([[3,4,5,30,122],[4,6,8,90]]);
+//6、复制一个二维数组
+    function fu(arr) {
+        for (let i =0;i<arr.length;i++){
+            crr[i]=[];
+            for(let j =0;j<arr[i].length;j++){
+                crr[i] = arr[i];
+            }
+        }
+        console.log(crr);
+    }
+    let crr = [];
+    fu([[3,5,77,4],[36,78,94,12],[4,6,8,90]]);
+//7、找出数字数组里面大于5的数的个数
+    function five(arr) {
+        for (let i =0;i<arr.length;i++){
+            if(arr[i]>5){
+                count++
+            }
+        }
+        console.log(count);
+    }
+    let count = 0;
+    five([4,5,7,8,11,1,2]);
+//8、找出一个数字数组里面大于5的数，组成一个新的数组
+    function wu(arr) {
+        for (let i =0;i<arr.length;i++){
+            if(arr[i]>=5){
+                drr[drr.length] = arr[i];
+            }
+        }
+        console.log(drr);
+    }
+    let drr =[];
+    wu([3,22,4,8,45,14]);
+//9、输入一个数字或者是字符添加到数组最后
+    function tian(arr) {
+        arr[arr.length] = "abc";
+        console.log(arr);
+    }
+    tian ([3,4,66,73,12]);
+//10、将数组中的数字内容求和
+    function jieguo(arr) {
+        for (let i =0;i<arr.length;i++){
+            jie += arr[i];
+        }
+        console.log(jie);
+    }
+    let jie =0;
+    jieguo([4,3,2,1,5]);
+//11、判断数组中是否所有数字都是大于0
+    function zero(arr) {
+        for (let i =0;i<arr.length;i++){
+            if(arr[i]<=0){
+                flag = "否";
+            }else{
+                flag ="是"
+            }
+        }
+        console.log(flag);
+    }
+    let flag ="是";
+    zero ([3,6,7,33,4,-2]);
+//12、合并两个数组
+    function hebi(err) {
+        for (let i =0;i<err.length;i++){
+            arr[arr.length] = err[i];
+        }
+        console.log(arr);
+    }
+    let arr = [5,6,34];
+    hebi(["ccc","abc"]);
+//13、找到数组中某一个值的所有下标
+    function xia(xiabiao,grr){
+        for (let i = 0;i<grr.length;i++){
+            if(grr[i] ==xiabiao){
+                console.log(i);
+            }
+        }
+    }
+    let grr = [12,5,66,33,5];
+    let xiabiao = 66;
+    xia (xiabiao,grr);
+//14、将数组反转
+    function fan(hrr) {
+        for (let i =0;i<hrr.length/2;i++){
+            let zhuan = hrr[i];
+            hrr[i] = hrr[hrr.length-i-1];
+            hrr[hrr.length-i-1]=zhuan;
+        }
+        console.log(hrr);
+    }
+    fan([66,7,3,45,8,55]);
+//15、移除数组中等于3的元素
+    function del(orr) {
+        for (let i =0;i<orr.length;i++){
+            if(orr[i] !==3){
+                newarr[newarr.length]=orr[i];
+            }
+        }
+        console.log(newarr);
+    }
+    let newarr = [];
+    del([45,6,3,7,8]);
+//16、删除数组中的第一个值
+    function one(prr) {
+        for (let i = 0;i<prr.length;i++){
+            prr[i]=prr[i+1];
+        }
+        prr.length--
+        console.log(prr);
+    }
+    one([4,6,77,89]);
+//17、在数组的前面添加一个值
+    function jia(qrr) {
+        for (let i =qrr.length;i>0;i--){
+            qrr[i]=qrr[i-1]
+        }
+        qrr[0]="oo";
+        console.log(qrr);
+    }
+    jia([3,5,7,99,22]);
+//18、封装一个n行m列的表格
+    function table(n,m) {
+        document.write("<table border='1' width='300' height='300' cellspacing='0'>");
+        for (let i=0;i<=n;i++){
+            document.write("<tr>");
+            for (let j =0;j<=m;j++){
+                document.write("<td></td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+    table(15,15);
+//19、封装n*n的乘法表
+    function cheng(n) {
+        for (let i=1;i<=n;i++){
+            for (let j =1;j<=i;j++){
+                jiu = i*j
+                document.write(i+"*"+j+ "="+jiu);
+                document.write("&nbsp;&nbsp;&nbsp;")
+            }
+            document.write("</br>");
+        }
+    }
+    let jiu =0;
+    cheng(15);
+//20、输入一个数是不是质数
+    function zhishu(zhi) {
+        for (let i =2;i<zhi;i++){
+            if(zhi % i ==0){
+                flag1 = "不是质数"
+            }
+        }
+        if(zhi ==1 || zhi ==0){
+            flag1 ="不是质数也不是和合数"
+        }
+        console.log(flag1);
+    }
+    let zhi = prompt("请输入数字");
+    let flag1 = "是质数";
+    zhishu(zhi);
+</script>
+<body>
+
+</body>
+</html>
